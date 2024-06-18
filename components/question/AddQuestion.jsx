@@ -64,9 +64,25 @@ const handleSubmit = async(e) =>{
         subject
     }
        await createQuestion (result)
+       setQuestion("")
+       setQuestionType("single")
+       setChoices([""])
+       setCorrectAnswers([""])
+       setSubject("")
+
     } catch (error) {
+        console.error(error)
         
     }
+}
+
+const handleAddSubject = () =>{
+    if(newSubject.trim() !==""){
+        setSubject(newSubject.trim())
+        setSubjectOptions([...subjectOptions, newSubject.trim()])
+        setNewSubject("")
+    }
+
 }
 
     return(

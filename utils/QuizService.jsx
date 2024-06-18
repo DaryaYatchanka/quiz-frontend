@@ -28,7 +28,7 @@ export const getAllQuestions = async()=>{
 
 export const fetchQuizForUser = async(number, category)=>{
     try {
-        const response = await api.get('/quiz/fetch-questions-for-user?numbOfQuestions=${number}&category=${category}')
+        const response = await api.get(`/quiz/fetch-questions-for-user?numbOfQuestions=${number}&category=${category}`)
         return response.data
     } catch (error) {
         console.error(error)
@@ -47,7 +47,7 @@ export const getCategory = async() =>{
 
 export const updateQuestion = async(id, question)=>{
     try {
-        const response = await api.put('/quiz/${id}/update', question)
+        const response = await api.put(`/quiz/${id}/update`, question)
         return response.data
 
     } catch (error) {
@@ -57,7 +57,7 @@ export const updateQuestion = async(id, question)=>{
 
 export const getQuestionById = async(id)=>{
     try {
-        const response = await api.get('/question/${id}')
+        const response = await api.get(`/question/${id}`)
         return response.data 
     } catch (error) {
         console.error(error)
@@ -66,7 +66,7 @@ export const getQuestionById = async(id)=>{
 
 export const deleteQuestionById = async(id)=>{
     try {
-        const response = await api.delete('/question/${id}')
+        const response = await api.delete(`/question/${id}`)
         return response.data
         
     } catch (error) {

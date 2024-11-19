@@ -43,6 +43,21 @@ const UpdateQuestion = () => {
 		setCorrectAnswers(e.target.value)
 	}
 
+	const handleQuestionUpdate = async(e) =>{
+		e.preventDefault()
+		try{
+			const updatedQuestion = {
+				question,
+				choices, 
+				correctAnswers: correctAnswers.toString().split(",").map((answer)=>answer.trim())
+
+		}
+		await updateQuestion(id, updateQuestion)
+	} catch(error){
+
+	}
+	}
+
 	const handleUpdate = async (e) => {
 		e.preventDefault()
 		try {
@@ -64,6 +79,8 @@ const UpdateQuestion = () => {
 	if (isLoading) {
 		return <p>Loading...</p>
 	}
+
+
 
 	return (
 		<div className="container">

@@ -14,9 +14,9 @@ const Quiz = () => {
 	const navigate = useNavigate()
 	const { selectedSubject, selectedNumQuestions } = location.state
 
-	useEffect(() => {
-		fetchQuizData()
-	}, [])
+	// useEffect(() => {
+	// 	fetchQuizData()
+	// }, [])
 
 	const fetchQuizData = async () => {
 		if (selectedNumQuestions && selectedSubject) {

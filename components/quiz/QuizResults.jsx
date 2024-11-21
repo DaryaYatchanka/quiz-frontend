@@ -1,11 +1,12 @@
 import React from "react"
-import { useLocation} from "react-router-dom"
+import { useLocation, useNavigate} from "react-router-dom"
 
  const QuizResult = () => {
 		const location = useLocation()
 		const { quizQuestions, totalScores } = location.state
 		const numQuestions = quizQuestions.length
 		const percentage = Math.round((totalScores / numQuestions) * 100)
+		const navigate = useNavigate()
 
 		const handleRetakeQuiz = () => {
 			alert("Oops! this functionality was not implemented!!!")

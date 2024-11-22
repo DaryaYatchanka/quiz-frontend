@@ -15,7 +15,7 @@ const Admin = () => {
 					Manage existing Quizes
 				</Link>
 			</nav>
-		</section>
+		</section> 
 	)
 }
 

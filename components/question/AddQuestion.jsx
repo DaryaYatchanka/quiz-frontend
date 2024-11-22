@@ -242,9 +242,9 @@ const handleAddSubject = () =>{
                                     <button type="submit" className="btn btn-outline-success mr-2">
                                         Save Question
                                     </button>
-                                    {/* <Link to=("") className="btn btn-outline-success mr-2">
-                                    Save Question
-                                </Link> */}
+                                    { <Link to={"/all-quizzes"} className="btn btn-outline-success mr-2">
+                                    Existing Questions
+                                </Link> }
                                 </div>
                             </form>
                         </div>

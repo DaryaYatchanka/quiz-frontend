@@ -1,19 +1,16 @@
 import React, { useState } from "react"
 // import "bootstrap/dist/css/bootstrap.min.css"
-5
-
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 // import { Navigate } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "../components/Home.jsx"
 import QuizStepper from "../components/quiz/QuizStepper"
-
 import Quiz from "../components/quiz/Quiz"
 import QuizResult from "../components/quiz/QuizResults"
 import GetAllQuiz from "../components/quiz/GetAllQuiz"
 import AddQuestion from "../components/question/AddQuestion"
 import UpdateQuestion from "../components/question/UpdateQuestion"
-import Navbar from "/components/layout/NavBar"
+import Navbar from "../components/layout/NavBar"
 import Admin from "../components/Admin"
 
 function App() {
